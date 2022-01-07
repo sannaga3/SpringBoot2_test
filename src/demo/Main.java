@@ -8,7 +8,10 @@ import service.MemberServiceImpl;
 public class Main {
 
 	public static void main(String[] args) {
-		MemberServiceImpl service = new MemberServiceImpl();
+//		MemberServiceImpl service = new MemberServiceImpl();
+		// シングルトンで生成したインスタンスを変数化してから各メソッドを実行していく。単体テストでは MemberServiceImpl service = を MemberService service = とインターフェス名で行うことがある。
+		MemberServiceImpl service = MemberServiceImpl.getInstance();
+		
 		System.out.println(service.greet(2));
 		
 		System.out.println(service.getAll());
