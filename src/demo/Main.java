@@ -16,6 +16,8 @@ public class Main {
 		for (Member m : list) {
 			System.out.println(m.getId() + "," + m.getName() + "," + m.getEmail());
 		}
+		
+		System.out.println(service.sumOf(1, 3));
 	}
 
 }
